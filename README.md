@@ -57,7 +57,7 @@ Ya que la API necesitaba como argumentos de entrada las fechas en formato YYYY-M
 Se puede encontrar el código en la [carpeta](https://github.com/Jacobomb/ETL_Project_BalearicTransit/tree/main/notebooks) en el fichero [2.Weather_API](https://github.com/Jacobomb/ETL_Project_BalearicTransit/blob/main/notebooks/2.Weather_API.ipynb).
 
 
-## Obtenicón BBDD adicional del OTLE
+## Obtención BBDD adicional del OTLE
 
 En este paso del proyecto se ha llevado a cabo una descarga de una base de datos adicional del *Observatorio del Transporte y la Logística en España* obtenido en la siguiente [página web](https://apps.fomento.gob.es/BDOTLE/visorBDpop.aspx?i=328).
 
