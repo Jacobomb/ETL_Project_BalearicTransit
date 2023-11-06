@@ -4,7 +4,7 @@ En este repositorio se encuentra el proceso de ETL completo para crear una base 
 
 ![Balearia](./images/balearia.JPG)
 
-Se puede seguir el proceso llevado a cabo por el autor en la siguiente [carpeta](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/tree/main/notebooks). Aquí se encuentran los notebooks con el código comentado para facilitar la comprensión del lector.
+Se puede seguir el proceso llevado a cabo por el autor en la siguiente [carpeta](https://github.com/Jacobomb/ETL_Project_BalearicTransit/tree/main/notebooks). Aquí se encuentran los notebooks con el código comentado para facilitar la comprensión del lector.
 
 A continuación se comentan los pasos más importantes del trabajo, así como las herramientas y software utilizado. Finalmente se comentarán también trabajos futuros sobre los que el proyecto puede desarrollarse.
 
@@ -23,7 +23,7 @@ Una vez el raspado ha terminado el autor consigue una tabla con 1500 filas, para
 * *Origen*: puerto de origen	
 * *Destino*: puerto de destino
 * *Llegada*: fecha de llegada al puerto de destino
-* *salida*: fecha de llegada del puerto de destino
+* *Salida*: fecha de llegada del puerto de destino
 * *Alineacion*: ubicación en el puerto de destino (ver imagen 1)
 * *Consignatorio*: representante de la naviera en el puerto de destino
 * *GT*: Gross Tonnage - medida de capacidad del barco que cuantifica el volumen de todos los espacios interiores del buque (camarotes, alojamientos, etc.)
@@ -35,7 +35,7 @@ Una vez el raspado ha terminado el autor consigue una tabla con 1500 filas, para
 
 ![Puerto de palma](./images/puerto_atraques.png)
 
-Se anima al lector a repasar el código encontrado en el fichero [1.TransitScrapper.ipynb](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/blob/main/notebooks/1.TransitScrapper.ipynb) de la carpeta [notebooks](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/tree/main/notebooks).
+Se anima al lector a repasar el código encontrado en el fichero [1.TransitScrapper.ipynb](https://github.com/Jacobomb/ETL_Project_BalearicTransit/blob/main/notebooks/1.TransitScrapper.ipynb) de la carpeta [notebooks](https://github.com/Jacobomb/ETL_Project_BalearicTransit/tree/main/notebooks).
 
 ## Weather API
 
@@ -54,7 +54,7 @@ Para conseguir las coordenadas de cada puerto se creó una lista de los valores 
 
 Ya que la API necesitaba como argumentos de entrada las fechas en formato YYYY-MM-DD, se decidió separar las columnas *llegada* y *salida* en *llegada_fecha* y *llegada_hora* e idénticamente con *salida_fecha* y *salida_hora*.
 
-Se puede encontrar el código en la [carpeta](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/tree/main/notebooks) en el fichero [2.Weather_API](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/blob/main/notebooks/2.Weather_API.ipynb).
+Se puede encontrar el código en la [carpeta](https://github.com/Jacobomb/ETL_Project_BalearicTransit/tree/main/notebooks) en el fichero [2.Weather_API](https://github.com/Jacobomb/ETL_Project_BalearicTransit/blob/main/notebooks/2.Weather_API.ipynb).
 
 
 ## Obtenicón BBDD adicional del OTLE
@@ -69,13 +69,13 @@ Los datos de GT se evalúan por las Autoridades Portuarias a partir de los buque
 
 Una vez se descargan los datos en formato CSV para los últimos tres años disponibles (2018-2019-2021) se pasa a limpiar la base de datos borrando aquellas filas en las que haya registros vacíos. Se borran también gran cantidad de columnas que no aportan al estudio y que pueden ser calculadas con facilidad más adelante.
 
-Se puede encontrar el código en la [carpeta](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/tree/main/notebooks) en el fichero [3.OTLE_csv](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/blob/main/notebooks/3.OTLE_csv.ipynb).
+Se puede encontrar el código en la [carpeta](https://github.com/Jacobomb/ETL_Project_BalearicTransit/tree/main/notebooks) en el fichero [3.OTLE_csv](https://github.com/Jacobomb/ETL_Project_BalearicTransit/blob/main/notebooks/3.OTLE_csv.ipynb).
 
 ## Construcción BBDD en MySQL
 
 Una vez llegados a este punto del proyecto, con todas las tablas de datos limpias y guardadas en el equipo del autor, se procede a formar la base de datos en MySQL.
 
-Si se comprueba el fichero [4.sql_builder](https://github.com/Jacobomb/ETL_Proyect_BalearicTransit/blob/main/notebooks/4.sql_builder.ipynb) se puede ver que se ha hecho uso de python y *mysql.connector* para crear y cargar la base de datos con los ficheros CSV.
+Si se comprueba el fichero [4.sql_builder](https://github.com/Jacobomb/ETL_Project_BalearicTransit/blob/main/notebooks/4.sql_builder.ipynb) se puede ver que se ha hecho uso de python y *mysql.connector* para crear y cargar la base de datos con los ficheros CSV.
 
 ## Trabajos futuros
 
