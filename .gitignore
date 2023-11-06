@@ -162,4 +162,4 @@ cython_debug/
 /data
 /chromedriver
 /notebooks/chromedriver
-/notebooks/contraseñas.txt
+contraseñas.txt
